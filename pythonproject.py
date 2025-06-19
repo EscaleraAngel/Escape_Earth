@@ -1,4 +1,3 @@
-# 6.19.25 1452
 
 import pygame
 import sys
