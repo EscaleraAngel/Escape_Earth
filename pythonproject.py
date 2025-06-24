@@ -1,3 +1,16 @@
+from flask import Flask
+from threading import Thread
+app = Flask(__name__)
+
+def index():
+    return "Escape Earth is Running."
+def run_server():
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+if __name__ == '__main__':
+    server_thread = Thread(target=run_server)
+    server_thread.start()
 
 import pygame
 import sys
